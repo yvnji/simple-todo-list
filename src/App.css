@@ -1,0 +1,19 @@
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(189, 211, 230);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  min-width: 480px;
+  padding: 26px 20px;
+  border-radius: 16px;
+  background-color: rgb(227, 236, 243);
+}

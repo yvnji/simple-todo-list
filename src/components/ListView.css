@@ -1,0 +1,66 @@
+.listview {
+  display: block;
+  position: relative;
+  min-height: 288px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.listview ol {
+  margin: 0;
+  padding-left: 2em;
+}
+
+.listview ol li {
+  clear: both;
+  margin-bottom: 8px;
+  height: auto;
+}
+
+.listview ol li span {
+  float: left;
+  font-size: 16px;
+  position: relative;
+  width: 308px;
+  /* margin-right: 60px; */
+}
+
+.listview ol li span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  transition: width 0.2s ease-in-out;
+  width: 0%;
+  height: 3px;
+  background-color: #2f71aa;
+}
+
+.listview ol li.completed span::after {
+  width: 100%;
+}
+
+.listview ol li button {
+  float: right;
+  margin-left: 4px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: #5ccc78;
+  padding: 4px 8px 5px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.listview ol li button:hover {
+  background-color: #3fb65d;
+}
+
+.listview ol li button.remove {
+  background-color: #fc5475;
+}
+
+.listview ol li button.remove:hover {
+  background-color: #e24060;
+}
