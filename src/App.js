@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import './App.css';
+import styled from 'styled-components';
+import GlobalStyle from './GlobalStyle';
 import InsertForm from './components/InsertForm';
 import ListView from './components/ListView';
 
@@ -38,7 +39,8 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <AppWrap>
+      <GlobalStyle />
       <h1>To Do📝</h1>
       <InsertForm onInsert={handleInsert} disabled={isLimitReached} />
       <ListView todoList={todoList} onComplete={handleComplete} onRemove={handleRemove} />
@@ -55,8 +57,15 @@ function App() {
           ※ todo는 10개까지만 입력이 가능합니다. <br />할 일을 완료하고 추가해주세요.
         </div>
       )}
-    </div>
+    </AppWrap>
   );
 }
 
 export default App;
+
+const AppWrap = styled.div`
+  min-width: 480px;
+  padding: 26px 20px;
+  border-radius: 16px;
+  background-color: rgb(227, 236, 243);
+`;
